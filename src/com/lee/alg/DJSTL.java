@@ -32,6 +32,7 @@ public class DJSTL {
 
 	// 无效值
 	private final int INF = Integer.MAX_VALUE;
+
 	// 网络结构
 	// private int[][] netWork = new int[][] { //
 	// { INF, 8, 32, INF, INF, INF }, //
@@ -132,6 +133,12 @@ public class DJSTL {
 		return resPathArray;
 	}
 
+	/**
+	 * @param args
+	 *            关系矩阵
+	 * @param Max
+	 * @throws IOException
+	 */
 	public static void main(int[][] args, int Max) throws IOException {
 		// public static void main(String[] argss) throws IOException {
 		// int INF = Integer.MAX_VALUE;
@@ -149,7 +156,8 @@ public class DJSTL {
 		MinDistance0.createFile(MinDistance0.mOutputFileDir, txtFileName2);
 		FileWriter mFileWriter = new FileWriter(MinDistance0.mOutputFileDir + "//" + txtFileName2, true);
 		BufferedWriter mBufferedWriter = new BufferedWriter(mFileWriter);
-		mCont = "strat,end,path1,length,path2,length,path3,length,path4,length,path5,length,path6,length,path7,length,path8,length,path9,length,path10,length," + "\n";
+		mCont = "strat,end,path1,length,path2,length,path3,length,path4,length,path5,length,path6,length,path7,length,path8,length,path9,length,path10,length,"
+				+ "\n";
 		mBufferedWriter.write(mCont);
 
 		Window.inTable("最短路径文件创建完成：" + txtFileName2);
